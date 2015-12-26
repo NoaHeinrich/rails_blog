@@ -1,0 +1,13 @@
+<div id="registrar">
+  <h4>Please enter your information here</h4>
+  <form action="/users" method="POST">
+    <div class="row column log-in-form">
+      <% if @errors %>
+        <p><%=@errors%></p>
+      <% end %>
+      Email: <input type="text" name="email" placeholder="john@website.com">
+      Password: <input type="password" name="password" placeholder="Password">
+      <input type="submit" class="button expanded" value="Sign up">
+    </div>
+  </form>
+</div>
