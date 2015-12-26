@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
     get '/' => 'pages#index'
+    get 'login' => 'pages#login'
+    post 'login' => 'pages#login'
     resources :posts, only: [:index, :show]
     resources :users do
       resources :posts, only: [:index, :new, :create, :destroy]
