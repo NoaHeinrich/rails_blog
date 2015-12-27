@@ -4,6 +4,9 @@ class PostsController < ApplicationController
   end
 
   def new
+    unless session[:user_id]
+      redirect_to "/"
+    end
   end
 
   def create
@@ -15,5 +18,14 @@ class PostsController < ApplicationController
     else
       redirect_to :back
     end
+  end
+
+  def edit
+
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update(params[:post])
   end
 end

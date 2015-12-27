@@ -3,5 +3,8 @@
   <% @posts.each do |post| %>
     <b><%= post.title %></b>
     <p><%= post.body %></p>
+    <% if post.user == current_user %>
+      <a href="/posts/<%=post.id%>/edit">Edit</a>
+    <% end %>
   <% end %>
 <% end %>
