@@ -4,6 +4,8 @@
     <div class="medium-6 medium-centered large-8 large-centered columns">
 
       <form action="login" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
         <div class="row column log-in-form">
           <% if @errors %>
             <%= @errors %>

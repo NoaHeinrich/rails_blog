@@ -1,6 +1,8 @@
 <div id="registrar">
   <h4>Please enter your information here</h4>
   <form action="/users" method="POST">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
     <div class="row column log-in-form">
       <% if @errors %>
         <p><%=@errors%></p>
