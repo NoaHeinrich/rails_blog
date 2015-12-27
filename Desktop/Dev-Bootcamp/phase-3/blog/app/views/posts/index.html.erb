@@ -1,7 +1,7 @@
 <h1>Blog Posts</h1>
 <% if @posts %>
   <% @posts.each do |post| %>
-    <%= @post.title %>
-    <%= @post.body %>
-    <% end %>
+    <b><%= post.title %></b>
+    <p><%= post.body %></p>
+  <% end %>
 <% end %>
