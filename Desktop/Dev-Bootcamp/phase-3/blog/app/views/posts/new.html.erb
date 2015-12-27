@@ -1,0 +1,11 @@
+ <form action="/posts" method="post">
+    Title<br>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input class="field" type="text" name="title" ><br>
+    Your Post<br>
+    <textarea rows="20" cols="80" name="body"></textarea>
+  </div>
+  <div class="form-submit">
+    <button class="button" type="submit">Submit</button>
+  </div>
+</form>

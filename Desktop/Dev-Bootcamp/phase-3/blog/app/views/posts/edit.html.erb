@@ -1,0 +1,9 @@
+<form method="post" action="/posts/<%= @post.id %>">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="hidden" name="_method" value="put">
+
+  Title<br><input name="title" type="text" value="<%=@post.title %>" ><br>
+  Body<br><input name="body" type="text" value="<%=@post.body %>" >
+
+  <input type="submit" value="Update">
+</form>

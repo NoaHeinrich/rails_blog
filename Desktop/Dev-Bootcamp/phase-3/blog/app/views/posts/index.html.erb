@@ -1,7 +1,14 @@
 <h1>Blog Posts</h1>
 <% if @posts %>
   <% @posts.each do |post| %>
-    <%= @post.title %>
-    <%= @post.body %>
+    <b><%= post.title %></b>
+    <p><%= post.body %></p>
+    <% if post.user == current_user %>
+      <a href="/posts/<%=post.id%>/edit">Edit</a>
+      <form method="post" action="/posts/<%= post.id %>" class="inline">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" name="_method" value="delete">
+      <button class="alert button post-button" type="submit" value="delete">Delete</button>
     <% end %>
+  <% end %>
 <% end %>

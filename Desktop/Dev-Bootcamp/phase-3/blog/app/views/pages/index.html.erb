@@ -1,1 +1,5 @@
 <div>Hi! Welcome to Noah's blog</div>
+<a href="/posts">View Posts</a>
+<% if authenticated? %>
+  <a href="/posts/new">Make a Post</a>
+<% end %>
